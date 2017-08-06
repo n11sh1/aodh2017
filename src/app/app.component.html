@@ -8,16 +8,18 @@
     <div class="col-md-4"><h3 class="text-center"><b>気温：暑い</b><br>25 度</h3></div>
     <div class="col-md-4">
       <h3 class="text-center"><b>全天日射量：多い</b><br>16.0 MJ/m2</h3><br>
+<!--
       <button md-button md-raised-button (click)="openDialog()" style="background-color: #BACA7F;font-size: large"><b><span class="red-txt">「トマトン」</span>のココロの声をきく</b></button><br>
+-->
     </div>
     <div class="col-md-4"><h3 class="text-center"><b>湿度：高い</b><br>60 %</h3></div>
     <br>
     <br>
+    <br>
     <div class="row">
       <div class="col-md-4 col-md-offset-4">
-<!--
         <img [src]="topUrl" class="center-block" width="40%">
--->
+        <button md-button md-raised-button (click)="openDialog()" style="background-color: #BACA7F;font-size: large;margin-left: 40px;margin-top: 40px;"><b><span class="red-txt">「トマトン」</span>のココロの声をきく</b></button><br>
       </div>
       <div class="col-md-3" [hidden]="!chatFlag">
         <label for="carrot">人参:</label>
