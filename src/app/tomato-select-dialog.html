@@ -1,0 +1,11 @@
+<h2 md-dialog-title><b>どっちの<span class="red-txt">トマトン</span>のココロの声をきく？</b></h2>
+<md-dialog-actions>
+  <div class="col-md-6">
+    <img [src]="tomatomBoyImgUrl" style="padding: 0 50px">
+    <button md-button [md-dialog-close]="false" (click)="selectedBoy()">おとこの子</button>
+  </div>
+  <div class="col-md-6">
+    <img [src]="tomatomGirlImgUrl" style="padding: 0 50px"><br>
+    <button md-button [md-dialog-close]="false" (click)="selectedGirl()">おんなの子</button>
+  </div>
+</md-dialog-actions>

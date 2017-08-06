@@ -1,21 +1,140 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=">
+<div style="text-align:center; border-bottom: inset 6px #BACA7F;">
+  <h2><b>やさいのきもち</b></h2>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="http://angularjs.blogspot.ca/">Angular blog</a></h2>
-  </li>
-</ul>
+<br>
+<div class="col-md-12">
+  <h2 class="text-center">野菜の気持ちを知ろう！</h2><br>
+  <form #talkForm="ngForm">
+    <div class="col-md-4"><h3 class="text-center"><b>気温：暑い</b><br>25 度</h3></div>
+    <div class="col-md-4">
+      <h3 class="text-center"><b>全天日射量：多い</b><br>16.0 MJ/m2</h3><br>
+      <button md-button md-raised-button (click)="openDialog()" style="background-color: #BACA7F;font-size: large"><b><span class="red-txt">「トマトン」</span>のココロの声をきく</b></button><br>
+    </div>
+    <div class="col-md-4"><h3 class="text-center"><b>湿度：高い</b><br>60 %</h3></div>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+<!--
+        <img [src]="topUrl" class="center-block" width="40%">
+-->
+      </div>
+      <div class="col-md-3" [hidden]="!chatFlag">
+        <label for="carrot">人参:</label>
+        <div class="input-group input-group-sm">
+          <input type="text" class="form-control" id="carrot" [(ngModel)]="carrotText" name="carrotText">
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-info btn-flat" (click)="carrotTalk()">
+              <i class="fa fa-comments" aria-hidden="true"></i>
+            </button>
+          </span>
+        </div>
 
+        <br>
+
+        <label for="carrot">玉ねぎ:</label>
+        <div class="input-group input-group-sm">
+          <input type="text" class="form-control" id="onion" [(ngModel)]="onionText" name="onionText">
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-info btn-flat" (click)="onionTalk()">
+              <i class="fa fa-comments" aria-hidden="true"></i>
+            </button>
+          </span>
+        </div>
+
+        <br>
+
+        <label for="carrot">トマト:</label>
+        <div class="input-group input-group-sm">
+          <input type="text" class="form-control" id="tomato" [(ngModel)]="tomatoText" name="tomatoText">
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-info btn-flat" (click)="tomatoTalk()">
+              <i class="fa fa-comments" aria-hidden="true"></i>
+            </button>
+          </span>
+        </div>
+
+        <br>
+
+        <label for="carrot">かぼちゃ:</label>
+        <div class="input-group input-group-sm">
+          <input type="text" class="form-control" id="pumpkin" [(ngModel)]="pumpkinText" name="pumpkinText">
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-info btn-flat" (click)="pumpkinTalk()">
+              <i class="fa fa-comments" aria-hidden="true"></i>
+            </button>
+          </span>
+        </div>
+
+        <br>
+
+        <label for="carrot">なす:</label>
+        <div class="input-group input-group-sm">
+          <input type="text" class="form-control" id="eggplant" [(ngModel)]="eggplantText" name="eggplantText">
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-info btn-flat" (click)="eggplantTalk()">
+              <i class="fa fa-comments" aria-hidden="true"></i>
+            </button>
+          </span>
+        </div>
+
+        <br>
+
+        <label for="carrot">ピーマン:</label>
+        <div class="input-group input-group-sm">
+          <input type="text" class="form-control" id="bellPepper" [(ngModel)]="bellPepperText" name="bellPepperText">
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-info btn-flat" (click)="bellPepperTalk()">
+              <i class="fa fa-comments" aria-hidden="true"></i>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+      </div>
+    </div>
+<!--
+    <div class="content-wrapper">
+      &lt;!&ndash; Main content &ndash;&gt;
+      <section class="content">
+        <div class="row">
+          &lt;!&ndash; left column &ndash;&gt;
+          <div class="col-md-4">
+            <div class="input-group input-group-sm">
+              <input type="text" class="form-control">
+              <span class="input-group-btn"><button type="button" class="btn btn-info btn-flat">Go!</button></span>
+            </div>
+            &lt;!&ndash; /input-group &ndash;&gt;
+          </div>
+          &lt;!&ndash;/.col (left) &ndash;&gt;
+
+          &lt;!&ndash; left column &ndash;&gt;
+          <div class="col-md-4">
+            <div class="input-group input-group-sm">
+              <input type="text" class="form-control">
+              <span class="input-group-btn"><button type="button" class="btn btn-info btn-flat">Go!</button></span>
+            </div>
+            &lt;!&ndash; /input-group &ndash;&gt;
+          </div>
+          &lt;!&ndash;/.col (left) &ndash;&gt;
+
+          &lt;!&ndash; left column &ndash;&gt;
+          <div class="col-md-4">
+            <div class="input-group input-group-sm">
+              <input type="text" class="form-control">
+              <span class="input-group-btn"><button type="button" class="btn btn-info btn-flat">Go!</button></span>
+            </div>
+            &lt;!&ndash; /input-group &ndash;&gt;
+          </div>
+          &lt;!&ndash;/.col (left) &ndash;&gt;
+        </div>
+        &lt;!&ndash; /.row &ndash;&gt;
+      </section>
+      &lt;!&ndash; /.content &ndash;&gt;
+    </div>
+-->
+  </form>
+</div>
 <router-outlet></router-outlet>
