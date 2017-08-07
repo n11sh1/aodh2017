@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
 
+## やさいのきもち プロダクト
+![トマトン](https://github.com/n11sh1/aodh2017/blob/master/src/assets/img/girl-fun.png)
+
+### デモ動画 - YouTube
+[![デモ動画](http://img.youtube.com/vi/FuEpKZeJAL0/0.jpg)](https://www.youtube.com/watch?v=FuEpKZeJAL0)
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
